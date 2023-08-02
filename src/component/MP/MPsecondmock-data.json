@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ထားထား",
+      "rollno": "2-Mech-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "ခင်ငြိမ်း",
+      "rollno": "2BE-Mech-9",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "မိုးသူဇာ",
+      "rollno": "2BE-Mech-10",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "မြတ်ဖုန်း",
+      "rollno": "2BE-Mech-23",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ပြည့်စုံ",
+      "rollno": "2BE-Mech-32",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

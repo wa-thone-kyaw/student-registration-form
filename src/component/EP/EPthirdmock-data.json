@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "စိုင်းရာဇာ",
+      "rollno": "3BE-EP-21",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "ခွန်းထက်နောင်",
+      "rollno": "3BE-EP-9",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "နေခြည်နွေး",
+      "rollno": "3BE-EP-10",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ဇေးသုတ",
+      "rollno": "3BE-EP-16",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ဆန်းသစ်လ",
+      "rollno": "3BE-EP-3",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

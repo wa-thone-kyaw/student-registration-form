@@ -1,0 +1,47 @@
+h6 {
+    margin-left: 50px;
+}
+
+.rules {
+    line-height: 45px;
+}
+
+.check input {
+    margin-top: 0px;
+    width: 70px;
+    height: 20px;
+    margin-left: 20px;
+}
+
+.check label {
+    margin-left:10px;
+    width: 1200px;
+}
+
+.agree_btn {
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
+    margin-top: 1%;
+    float: right;
+    margin-right: 80px;
+}
+
+.continue {
+
+    margin-top: 1%;
+    float: right;
+    margin-right: 80px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 12px;
+    }
+}

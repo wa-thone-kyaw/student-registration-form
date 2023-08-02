@@ -1,0 +1,45 @@
+/* .Navbar { */
+/* background-color: darkblue; */
+/* } */
+/*  */
+.Navbar ul { 
+ list-style-type: none; 
+ margin: 0; 
+ padding: 15px 15px; 
+ overflow: hidden;
+ background-color: none;
+} 
+/*.Navbar li{
+  float: right;
+  color:white;
+  font-family: Arial, sans-serif;
+  display:block;
+  text-align: center;
+  padding: 10px 7px;
+  text-decoration: none;
+}
+/* .Navbar li:hover { */
+/* background-color: rgb(40, 189, 209); */
+/*  */
+/* } */
+
+.Navbar {
+  background-color: darkblue;
+ 
+}
+
+.Navbar li {
+  float: right;
+  color: white;
+  font-family: Arial, sans-serif;
+  display: block;
+  text-align: center;
+  padding: 10px 7px;
+  text-decoration: none;
+  overflow: hidden;
+  
+}
+
+.Navbar li:hover {
+  background-color: rgb(40, 189, 209);
+}

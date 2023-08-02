@@ -1,0 +1,16 @@
+.sidebar{
+    width:250px;
+    background-color: darkblue;
+}
+
+.sidebar ul.nav{
+    padding:0px !important;
+}
+.sidebar ul li a:hover{
+background-color:blueviolet;
+
+}
+.sidebar ul li a:active{
+    background-color:wheat;
+    
+    }

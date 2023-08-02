@@ -1,0 +1,90 @@
+.chooseyear {
+  height: auto;
+}
+
+/* Base styles for the .year elements */
+.year {
+  margin: 10px;
+}
+
+/* Apply a hover effect to all .year elements */
+.year:hover {
+  transform: scale(1);
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 767px) {
+  .chooseyear {
+    /* Modify margins for smaller screens */
+    margin-left: 100px;
+  }
+}
+
+.year .left {
+  float: left;
+}
+
+
+.year .right {
+  float: right;
+}
+
+
+.year .first {
+  margin: 30px;
+  margin-left: 250px;
+}
+
+.year .first:hover {
+  transform: scale(1.22);
+}
+
+.year .second {
+  margin: 30px;
+  margin-left: 250px;
+
+}
+
+.year .second:hover {
+  transform: scale(1.22);
+}
+
+.year .third {
+  margin: 30px;
+  margin-left: 250px;
+}
+
+.year .third:hover {
+  transform: scale(1.22);
+}
+
+
+.year .fourth {
+  margin: 30px;
+  margin-right: 330px;
+}
+
+.year .fourth:hover {
+  transform: scale(1.22);
+}
+
+.year .fifth {
+  margin: 30px;
+  margin-right: 330px;
+}
+
+.year .fifth:hover {
+  transform: scale(1.22);
+}
+
+
+.year .sixth {
+  margin: 30px;
+  margin-right: 330px;
+}
+
+.year .sixth:hover {
+  transform: scale(1.22);
+}
+
+/* For screens with a width of 768px or larger */

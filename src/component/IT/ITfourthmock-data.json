@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ခန့်ထည်",
+      "rollno": "4BE-IT-2",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "သီရိ",
+      "rollno": "4BE-IT-11",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ထူးမွန်",
+      "rollno": "4BE-IT-23",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "လဲ့လဲ့",
+      "rollno": "4BE-IT-21",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "နီနီ၀င်း",
+      "rollno": "4BE-IT-9",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

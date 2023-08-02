@@ -1,0 +1,60 @@
+.background{
+    height: 1300px;
+    width: 100%;
+}
+
+body{
+    background-color: white;
+}
+.form-group{
+    height: 70px;
+}
+
+.register-container{
+    width: 100% !important;
+    height: 1300px;
+    margin-top: 130px;
+    margin-left:20px;
+}
+.register-container input{
+    overflow:visible;
+    width:60%;
+    height:40px;
+    text-align:left;
+    font-weight: 300;
+    border:none;
+    border-bottom:1px dotted black;
+    font-size:16px;
+    padding-left:0;  
+    margin-left:500px;
+}
+
+label{
+    width:490px;
+    display:inline-block;
+    text-align:left;
+    font-size: 16px;
+}
+.header h2{
+    line-height:2;
+    text-align:center;
+    margin-left: 40px;
+
+}
+.header p{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    float:right;
+}
+
+.uploadphoto{
+    max-width: 50px;
+    float:right;
+    margin-right: 150px;
+    margin-top: 50px;   
+}
+
+.current input{
+    border: none;
+    border-bottom:  1px dotted;
+}

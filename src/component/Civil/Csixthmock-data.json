@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "လမင်း",
+      "rollno": "6BE-Civil-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "ခင်၀င့်၀ါ",
+      "rollno": "6BE-Civil-23",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "မင်းသွေး",
+      "rollno": "6BE-Civil-7",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "နေတိုး",
+      "rollno": "6BE-Civil-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ဖွေးဖွေး",
+      "rollno": "6BE-Civil-9",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

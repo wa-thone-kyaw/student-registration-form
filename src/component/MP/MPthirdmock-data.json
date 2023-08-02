@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ဖူးဖူး",
+      "rollno": "3BE-Mech-12",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "လင်းသုတ",
+      "rollno": "3BE-Mech-2",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ထက်ပိုင်",
+      "rollno": "3BE-Mech-19",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ငြိမ်းကို",
+      "rollno": "3BE-Mech-13",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "နန်းဆု",
+      "rollno": "3BE-Mech-3",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

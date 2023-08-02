@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "သူရ",
+      "rollno": "4BE-EP-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "စိုးနောင်",
+      "rollno": "4BE-EP-23",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ကောင်းပြည့်",
+      "rollno": "4BE-EP-7",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "လဲ့ရောင်ခြည်",
+      "rollno": "4BE-EP-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "နေမင်း",
+      "rollno": "4BE-EP-9",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

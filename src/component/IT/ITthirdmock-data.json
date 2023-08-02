@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ထက်ဦးရှိန်",
+      "rollno": "3BE-IT-22",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "လင်းထက်",
+      "rollno": "3BE-IT-9",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "သော်ထက်ပိုင်",
+      "rollno": "3BE-IT-10",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "မေသော်တာ",
+      "rollno": "3BE-IT-16",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "နွယ်နွယ်",
+      "rollno": "3BE-IT-30",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

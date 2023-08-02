@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "မေဖြူစင်",
+      "rollno": "2BE-EP-5",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "သွင်ထူးအောင်",
+      "rollno": "2BE-EP-4",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "မိုးမြင့်သခင်",
+      "rollno": "2BE-EP-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "မြင့်မြတ်လွန်း",
+      "rollno": "2BE-EP-11",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ခရေ",
+      "rollno": "2BE-EP-2",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

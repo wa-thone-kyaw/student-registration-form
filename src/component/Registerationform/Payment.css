@@ -1,0 +1,25 @@
+.fee table{
+    margin-left:50px;
+    display: flex;
+    flex-direction: column;
+    width:auto;
+    height:auto;
+    border:none;
+    font-size: 20px;
+}
+.fee td{
+    width: 70%;
+    font-size:20px;
+
+}
+.fee label{
+    margin-left:50px;
+    width:90px;
+}
+.fee input{
+    margin-left:10px;
+    padding:10px;
+}
+.feeimage{
+   margin-left:70px;
+}

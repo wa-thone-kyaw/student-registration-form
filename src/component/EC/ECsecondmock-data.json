@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ဖြိူးစည်လင်းသူ",
+      "rollno": "2BE-EC-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "လင်းထက်နောင်",
+      "rollno": "2BE-EC-2",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "အမရာဦးမော်",
+      "rollno": "2BE-EC-5",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ပွင့်ခက်လွှာ",
+      "rollno": "2BE-EC-13",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ရတနာ‌‌သွန်း",
+      "rollno": "2BE-EC-3",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

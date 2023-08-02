@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "သိုက်မင်းဆက်",
+      "rollno": "3BE-Civil-22",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "ခန့်ဦးရှိန်",
+      "rollno": "3BE-Civil-9",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ပိုင်သုတ",
+      "rollno": "3BE-Civil-10",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ချန်းငြိမ်းအောင်",
+      "rollno": "3BE-Civil-16",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "နန္ငဦးမော်",
+      "rollno": "3BE-Civil-30",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

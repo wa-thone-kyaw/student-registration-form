@@ -1,0 +1,110 @@
+.background {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    background-color: white;
+}
+
+.register-container {
+    width: 100% !important;
+    height:100%;
+    margin-left: 50px;
+    margin-top: 100px;
+    background: white;
+
+}
+
+.register-container input {
+    overflow: visible;
+    width: 60%;
+    height: 40px;
+    text-align: center;
+    font-weight: 150;
+    background: white;
+    border: none;
+    border-bottom: 1px dotted black;
+    font-size: 18px;
+    padding-left: 0;
+    margin-left: 70px;
+}
+
+label {
+    margin-left: 30px;
+    font-size: 18px;
+    width: 305px;
+    display: inline-block;
+    text-align: left;
+
+}
+
+.header h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 2;
+    text-align: center;
+    
+
+}
+
+.header p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    float: right;
+    font-size: 18px;
+    margin-right:0px;
+    
+}
+.current input{
+    width:190px;
+    font-size: 18px;
+    border:none;
+   border-bottom: 1px dotted;
+}
+
+
+.uploadphoto {
+    max-width: 50px;
+    float: right;
+    margin-right: 150px;
+    margin-top: 50px;
+}
+
+.title {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 2px;
+}
+
+
+h5 {
+    text-align: left;
+}
+
+.back {
+    float: left;
+    margin-left: 30px;
+}
+
+.next {
+    float: right;
+    margin-right: 30px;
+}
+.submit {
+    margin: 5% 45%;
+}
+
+
+.accept {
+    float: center;
+}
+
+/* Media query for screens with a width less than or equal to 768px */
+@media (max-width: 768px) {
+    .register-container {
+        max-width: 90%;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}

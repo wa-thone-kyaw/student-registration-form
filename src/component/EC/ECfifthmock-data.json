@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ရတီလှိုင်း",
+      "rollno": "5BE-EC-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "ကောင်းကင်ယံ",
+      "rollno": "5BE-EC-2",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ရွှေစင်လင်း",
+      "rollno": "5BE-EC-5",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "လ၀န်းရံ",
+      "rollno": "5BE-EC-14",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ရနံ့သင်း",
+      "rollno": "5BE-EC-19",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

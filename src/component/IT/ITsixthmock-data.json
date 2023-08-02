@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "နွေးနွေး",
+      "rollno": "6BE-IT-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "မြတ်ကိုကို",
+      "rollno": "6BE-IT-21",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "ခိုင်အိ",
+      "rollno": "6BE-IT-7",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ပန်းနု",
+      "rollno": "6BE-IT-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "ပိုင်ပိုင်",
+      "rollno": "6BE-IT-9",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "စုရတနာမိုး",
+      "rollno": "5BE-IT-5",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "မြတ်မွန်သန့်",
+      "rollno": "5BE-IT-22",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "လွင်လွင်မာ",
+      "rollno": "5BE-IT-12",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "နွေပွင့်ဦး",
+      "rollno": "5BE-IT-9",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "သင်းသန္တာကျော်",
+      "rollno": "5BE-IT-10",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

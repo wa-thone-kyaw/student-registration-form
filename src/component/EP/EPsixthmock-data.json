@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "မိုးမိုး",
+      "rollno": "6BE-EP-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "မင်းရာဇာ",
+      "rollno": "6BE-EP-11",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "လှနု‌‌‌",
+      "rollno": "6BE-EP-10",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "ထွန်းထွန်း",
+      "rollno": "6BE-EP-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "စိုင်းသုတ",
+      "rollno": "6BE-EP-7",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

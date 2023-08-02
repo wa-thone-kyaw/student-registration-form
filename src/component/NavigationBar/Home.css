@@ -1,0 +1,62 @@
+button {
+  background-color: darkblue;
+  border-radius: 30px;
+  border: none;
+  line-height: 1.5;
+  color: white;
+  padding: 15px 22px;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  width: 150%;
+  height: auto;
+}
+
+.bg h1{
+  font-size: 300%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 3.5;
+  color:black;
+  text-align: center;
+}
+.bg h2{
+  font-size: 200%;
+  font-family: Georgia, serif;
+  color:black;
+  text-align: center;
+}
+
+.square {
+  margin: 10% 45%;
+  margin-top: 250px;
+}
+
+.square :hover {
+  transform: scale(1.22);
+}
+
+.bg {
+  background-image: url(/public/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 1360px;
+  height: 900px;
+  backdrop-filter: opacity(1000px);
+  background-blend-mode: lighten;
+
+}
+
+@media (max-width: 768px) {
+  .bg {
+    max-width: 90%;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  .square{
+    max-width:90%;
+  }
+}

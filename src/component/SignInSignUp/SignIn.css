@@ -1,0 +1,92 @@
+body{
+    background-color:rgb(51, 231, 231);
+}
+.title{
+    color:black;
+    text-align:center;
+}
+.subtitle{
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+
+.signin .err{
+    margin-bottom: 0px;
+    margin:1rem auto;
+}
+
+.signin input{
+    display:flex;
+    flex-direction:column;
+    width:320px;
+    margin:1.5rem auto;
+    padding:1rem;
+    border-radius:25px;
+    font-size:1rem;
+    font-family:inherit;
+    outline:0;
+    border:1px solid;
+}
+.sign_btn{
+    display:block;
+    margin-top: 2px;
+    width: 40px;
+    padding:0.75rem 1rem;
+    border-radius:25px;
+    outline:0;
+    font-size:1rem;
+    font-family:inherit;
+    cursor:pointer;
+    background-color:blue;
+    color:white;
+    border:2px solid transparent;
+}
+.sign_btn:hover{
+    border:2px solid blue;
+    background-color: rgb(2, 20, 26);
+}
+
+.error_msg{
+    color:red;
+    font-size:0,85rem;
+    margin-right:50px;
+    height:5px;
+    text-align:center;
+    padding-left:0.2rem;
+}
+.icons{
+    display:flex;
+    justify-content:center;
+    gap:1.5rem;
+}
+.icon{
+    color:rgb(10, 2, 2);
+    cursor:pointer;
+}
+.link_container{
+    display:flex;
+    justify-content:center;
+}
+.small{
+    color:brown;
+    text-align:center;
+    font-size:0.85rem;
+    text-decoration:underline;
+    margin-bottom:5rem;
+    cursor:pointer;
+}
+@media only screen and (max-width:620px){
+    .inputs_container input{
+        width:100%;
+    }
+    .log_button{
+        width:100%;
+    }
+}
+
+@media only screen and (max-height:670px){
+    .subtitle{
+        margin-bottom:2rem;
+    }
+}
+

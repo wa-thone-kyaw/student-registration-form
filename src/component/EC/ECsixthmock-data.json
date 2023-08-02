@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "fullName": "ဇူးဇူး",
+      "rollno": "6BE-EC-13",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 2,
+      "fullName": "၀င့်၀ါဖူး",
+      "rollno": "6BE-EC-3",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 3,
+      "fullName": "မင်းသွေးခေတ်",
+      "rollno": "6BE-CiECvil-7",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 4,
+      "fullName": "နေရောင်",
+      "rollno": "6BE-EC-1",
+      "phoneNumber": "333-962-7516"
+    
+    },
+    {
+      "id": 5,
+      "fullName": "မိုးမြင့်စံ",
+      "rollno": "6BE-EC-6",
+      "phoneNumber": "333-962-7516"
+    
+    }
+  ]

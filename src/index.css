@@ -1,0 +1,22 @@
+
+/*body{
+  background-image: url(/src/images/bg2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}*/
+
+h1{
+  font-size: 300%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 3.5;
+  color:black;
+  text-align: center;
+}
+
+h2{
+  font-size: 200%;
+  font-family: Georgia, serif;
+  color:black;
+  text-align: center;
+}

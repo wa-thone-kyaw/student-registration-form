@@ -1,0 +1,77 @@
+.bar{
+    width:250px;
+   }
+   .chooseyear{
+    margin-top: 0px;
+    height:auto;
+    width:auto;
+  }
+  .chooseyear h1{
+    font-size: 300%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 3.5;
+    color:black;
+    text-align: center;
+  }
+  
+  
+    .year .left{
+      float:left;
+    }
+    
+  
+    .year .right{
+      float:right;
+    }
+  
+    
+   .year .first{
+     margin:30px;
+     margin-left: 350px;
+   }
+   .year .first:hover{
+    transform:scale(1.22);
+   }
+  
+   .year .second{
+     margin:30px;
+     margin-left:  350px;
+  
+   }
+   .year .second:hover{
+    transform:scale(1.22);
+   }
+  
+   .year .third{
+    margin:30px;
+    margin-left:  350px;
+   }
+   .year .third:hover{
+    transform:scale(1.22);
+   }
+  
+  
+   .year .fourth{
+    margin:30px;
+    margin-right:330px;
+   }
+   .year .fourth:hover{
+    transform:scale(1.22);
+   }
+  
+   .year .fifth{
+    margin:30px;
+    margin-right:330px;
+   }
+   .year .fifth:hover{
+    transform:scale(1.22);
+   }
+  
+  
+   .year .sixth{
+    margin:30px;
+    margin-right:330px;
+   }
+   .year .sixth:hover{
+    transform:scale(1.22);
+   }
