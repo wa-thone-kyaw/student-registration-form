@@ -13,14 +13,8 @@ export const SecondCivil = () => {
   //searchName
   const filteredData = data.filter((item) => {
     const engname = item?.engname?.toLowerCase();
-    const rollno = item?.rollno?.toLowerCase();
-    const phone_no = item?.phone_no?.toLowerCase();
 
-    return (
-      engname?.includes(searchQuery?.toLowerCase()) ||
-      rollno?.includes(searchQuery?.toLowerCase()) ||
-      phone_no?.includes(searchQuery?.toLowerCase())
-    );
+    return engname?.includes(searchQuery?.toLowerCase());
   });
   const handleSearchInputChange = (event) => {
     setSearchQuery(event.target.value);
@@ -74,6 +68,26 @@ export const SecondCivil = () => {
     }
   };
 
+  //delete student
+  const handleDeleteClick = async (studentId) => {
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/student_registration/delete_document/${studentId}`,
+        {
+          method: "DELETE",
+        }
+      );
+      if (response.ok) {
+        const updateData = data.filter((item) => item._id !== studentId);
+        setData(updateData);
+      } else {
+        console.error("Failed to delete item");
+      }
+    } catch (error) {
+      console.error("Error while deleting item", error);
+    }
+  };
+
   const [editFormData, setEditFormData] = useState({
     engname: "",
     rollno: "",
@@ -82,41 +96,43 @@ export const SecondCivil = () => {
 
   const [editContactId, setEditContactId] = useState(null);
 
-  const handleEditFormChange = (event) => {
+  const handleEditFormSubmit = async (event) => {
     event.preventDefault();
+    try {
+      const response = await fetch(
+        `http://127.0.0.1:8000/student_registration/update_document/${editContactId}`,
+        {
+          method: "PUT",
+          headers: {
+            Content_Type: "application/json",
+          },
+          body: JSON.stringify(editFormData),
+        }
+      );
 
-    const fieldName = event.target.getAttribute("name");
-    const fieldValue = event.target.value;
-
-    const newFormData = { ...editFormData };
-    newFormData[fieldName] = fieldValue;
-
-    setEditFormData(newFormData);
+      if (response.ok) {
+        const updateData = data.map((item) =>
+          item._id === editContactId
+            ? {
+                ...item,
+                engname: editFormData.engname,
+                rollno: editFormData.rollno,
+                phone_no: editFormData.phone_no,
+              }
+            : item
+        );
+        setData(updateData);
+        setEditContactId(null);
+      } else {
+        console.error("Error editing student");
+      }
+    } catch (error) {
+      console.error("Error", error);
+    }
   };
 
-  const handleEditFormSubmit = (event) => {
-    event.preventDefault();
-
-    const editedContact = {
-      id: editContactId,
-      engname: editFormData.engname,
-      rollno: editFormData.rollno,
-      phone_no: editFormData.phone_no,
-    };
-
-    const newContacts = [...data];
-
-    const index = data.findIndex((data) => data.id === editContactId);
-
-    newContacts[index] = editedContact;
-
-    setData(newContacts);
-    setEditContactId(null);
-  };
-
-  const handleEditClick = (event, data) => {
-    event.preventDefault();
-    setEditContactId(data.id);
+  const handleEditClick = (data) => {
+    setEditContactId(data._id);
 
     const formValues = {
       engname: data.engname,
@@ -130,17 +146,6 @@ export const SecondCivil = () => {
   const handleCancelClick = () => {
     setEditContactId(null);
   };
-
-  const handleDeleteClick = (contactId) => {
-    const newContacts = [...data];
-
-    const index = data.findIndex((data) => data.id === contactId);
-
-    newContacts.splice(index, 1);
-
-    setData(newContacts);
-  };
-
   return (
     <div className="table">
       <div class="col-sm-3 mt-5 mb-4 text-gred">
@@ -161,6 +166,7 @@ export const SecondCivil = () => {
         <table>
           <thead>
             <tr>
+              <th>ID</th>
               <th>Name</th>
               <th>Roll-no</th>
               <th>Phone-no</th>
@@ -171,46 +177,43 @@ export const SecondCivil = () => {
             {searchClicked
               ? filteredData.map((item, index) => (
                   <Fragment key={index}>
-                    {editContactId === item._id ? (
-                      <CivilEditableRow
-                        editFormData={editFormData}
-                        handleEditFormChange={handleEditFormChange}
-                        handleCancelClick={handleCancelClick}
-                      />
-                    ) : (
-                      <tr>
-                        <td>{item.engname}</td>
-                        <td>{item.rollno}</td>
-                        <td>{item.phone_no}</td>
-                        <td>
-                          <button>View</button>
-                          <button>Edit</button>
-                          <button>Delete</button>
-                        </td>
-                      </tr>
-                    )}
+                    : (
+                    <tr>
+                      <td>{item._id}</td>
+                      <td>{item.engname}</td>
+                      <td>{item.rollno}</td>
+                      <td>{item.phone_no}</td>
+                      <td>
+                        <button>View</button>
+                        <button onClick={() => handleEditClick(item)}>
+                          Edit
+                        </button>
+                        <button onClick={() => handleDeleteClick(item._id)}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                    )
                   </Fragment>
                 ))
               : data.map((item, index) => (
                   <Fragment key={index}>
-                    {editContactId === item._id ? (
-                      <CivilEditableRow
-                        editFormData={editFormData}
-                        handleEditFormChange={handleEditFormChange}
-                        handleCancelClick={handleCancelClick}
-                      />
-                    ) : (
-                      <tr>
-                        <td>{item.engname}</td>
-                        <td>{item.rollno}</td>
-                        <td>{item.phone_no}</td>
-                        <td>
-                          <button>View</button>
-                          <button>Edit</button>
-                          <button>Delete</button>
-                        </td>
-                      </tr>
-                    )}
+                    <tr>
+                      <td>{item._id}</td>
+                      <td>{item.engname}</td>
+                      <td>{item.rollno}</td>
+                      <td>{item.phone_no}</td>
+                      <td>
+                        <button>View</button>
+                        <button onClick={() => handleEditClick(item)}>
+                          Edit
+                        </button>
+                        <button onClick={() => handleDeleteClick(item._id)}>
+                          Delete
+                        </button>
+                      </td>
+                    </tr>
+                  
                   </Fragment>
                 ))}
           </tbody>

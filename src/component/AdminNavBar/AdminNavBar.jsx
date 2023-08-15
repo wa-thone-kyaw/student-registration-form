@@ -4,8 +4,10 @@ import React from "react";
 export const AdminNavBar = () => {
   return (
     <div class="admNavbar">
-       
-      <img src="./tulogo.jpg" alt="It" width={80} height={90}/> 
+      <img src="./tulogo.jpg" alt="It" width={80} height={90} />
+      <Link to="/signin">
+        <li>Sign In</li>
+      </Link>
       <Link to="/signup">
         <li>SIGN UP</li>
       </Link>

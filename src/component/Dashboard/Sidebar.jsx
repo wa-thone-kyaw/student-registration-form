@@ -3,15 +3,10 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "./Sidebar.css";
 import { Navigationbar } from "../NavigationBar/NavigationBar";
 
-
 import { Link } from "react-router-dom";
 export const Sidebar = () => {
   return (
-    <div>
-      <Navigationbar/>
     <>
-    
-      
       <div className="sidebar">
         <div className="sidebar d-flex flex-column bg-db text-white p-4 vh-100">
           <i className="bi bi-bootstrap fs-5 me-2">
@@ -71,8 +66,6 @@ export const Sidebar = () => {
           </div>
         </div>
       </div>
-      
     </>
-    </div>
   );
 };
