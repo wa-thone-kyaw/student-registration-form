@@ -13,6 +13,8 @@ export const SignUp = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const username_pattern = /^[\u1000-\u109f]+$/;
+  const password_pattern = /^[a-z]+$/;
 
   const [errors, setErrors] = useState({});
   const handleUsernameChange = (event) => {
@@ -23,15 +25,21 @@ export const SignUp = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    const formData = new FormData();
-    formData.append("username", username);
-    formData.append("password", password);
+    // Validate username and password against patterns
+    const usernameIsValid = username_pattern.test(username);
+    const passwordIsValid = password_pattern.test(password);
 
-    setUsername("");
-    setPassword("");
-
-    setErrors(SignUpValidation(formData));
-    if (!Object.values(errors).some((error) => error)) {
+    // Update errors state based on validation
+    setErrors({
+      username: usernameIsValid ? "" : "Username must be between 'က' and 'အ'.",
+      password: passwordIsValid
+        ? ""
+        : "Password must contain only small letters.",
+    });
+    if (usernameIsValid && passwordIsValid) {
+      const formData = new FormData();
+      formData.append("username", username);
+      formData.append("password", password);
       axios
         .post("http://127.0.0.1:8000/student_registration/signup", formData)
         .then((res) => {
@@ -42,6 +50,10 @@ export const SignUp = () => {
           console.error("try again:", err);
         });
     }
+
+    setUsername("");
+    setPassword("");
+
     /* if(errors.username==="" && errors.email==="" && errors.password===""){
             axios.post('' , values)
             .then(res => { navigate('/home')})
@@ -52,7 +64,7 @@ export const SignUp = () => {
 
   return (
     <>
-    <AdminNavBar />
+      <AdminNavBar />
       <Card>
         <h1 className="title">Sign Up</h1>
         <p className="subtitle">Create an account!</p>
@@ -97,4 +109,3 @@ export const SignUp = () => {
     </>
   );
 };
-export default SignUp;

@@ -1,6 +1,5 @@
 import React, { useState, Fragment, useEffect } from "react";
 import "./Civil.css";
-import CivilEditableRow from "./CivilEditableRow";
 
 export const SecondCivil = () => {
   const [engname, setEngname] = useState("");
@@ -88,40 +87,50 @@ export const SecondCivil = () => {
     }
   };
 
-  const [editFormData, setEditFormData] = useState({
-    engname: "",
-    rollno: "",
-    phone_no: "",
-  });
-
   const [editContactId, setEditContactId] = useState(null);
+  const handleEditFormChange = (event, fieldName, contactId) => {
+    const updatedData = data.map((item) => {
+      if (item._id === contactId) {
+        return {
+          ...item,
+          [fieldName]: event.target.value,
+        };
+      }
+      return item;
+    });
+
+    setData(updatedData);
+  };
 
   const handleEditFormSubmit = async (event) => {
     event.preventDefault();
     try {
+      const updateData = {
+        engname: data.find((item) => item._id === editContactId).engname,
+        rollno: data.find((item) => item._id === editContactId).rollno,
+        phone_no: data.find((item) => item._id === editContactId).phone_no,
+      };
+
       const response = await fetch(
         `http://127.0.0.1:8000/student_registration/update_document/${editContactId}`,
         {
-          method: "PUT",
-          headers: {
-            Content_Type: "application/json",
-          },
-          body: JSON.stringify(editFormData),
+          method: "PATCH",
+          body: JSON.stringify(updateData),
         }
       );
 
       if (response.ok) {
-        const updateData = data.map((item) =>
+        const updatedData = data.map((item) =>
           item._id === editContactId
             ? {
                 ...item,
-                engname: editFormData.engname,
-                rollno: editFormData.rollno,
-                phone_no: editFormData.phone_no,
+                engname: updateData.engname,
+                rollno: updateData.rollno,
+                phone_no: updateData.phone_no,
               }
             : item
         );
-        setData(updateData);
+        setData(updatedData);
         setEditContactId(null);
       } else {
         console.error("Error editing student");
@@ -132,19 +141,8 @@ export const SecondCivil = () => {
   };
 
   const handleEditClick = (data) => {
+    console.log("Edit clicked for", data._id);
     setEditContactId(data._id);
-
-    const formValues = {
-      engname: data.engname,
-      rollno: data.rollno,
-      phone_no: data.phone_no,
-    };
-
-    setEditFormData(formValues);
-  };
-
-  const handleCancelClick = () => {
-    setEditContactId(null);
   };
   return (
     <div className="table">
@@ -200,20 +198,62 @@ export const SecondCivil = () => {
                   <Fragment key={index}>
                     <tr>
                       <td>{item._id}</td>
-                      <td>{item.engname}</td>
-                      <td>{item.rollno}</td>
-                      <td>{item.phone_no}</td>
                       <td>
-                        <button>View</button>
-                        <button onClick={() => handleEditClick(item)}>
-                          Edit
-                        </button>
-                        <button onClick={() => handleDeleteClick(item._id)}>
-                          Delete
-                        </button>
+                        {editContactId === item._id ? (
+                          <input
+                            type="text"
+                            value={item.engname}
+                            onChange={(e) =>
+                              handleEditFormChange(e, "engname", item._id)
+                            }
+                          />
+                        ) : (
+                          item.engname
+                        )}
+                      </td>
+
+                      <td>
+                        {editContactId === item._id ? (
+                          <input
+                            type="text"
+                            value={item.rollno}
+                            onChange={(e) =>
+                              handleEditFormChange(e, "rollno", item._id)
+                            }
+                          />
+                        ) : (
+                          item.rollno
+                        )}
+                      </td>
+                      <td>
+                        {editContactId === item._id ? (
+                          <input
+                            type="text"
+                            value={item.phone_no}
+                            onChange={(e) =>
+                              handleEditFormChange(e, "phone_no", item._id)
+                            }
+                          />
+                        ) : (
+                          item.phone_no
+                        )}
+                      </td>
+                      <td>
+                        {editContactId === item._id ? (
+                          <button onClick={handleEditFormSubmit}>Save</button>
+                        ) : (
+                          <>
+                            <button>View</button>
+                            <button onClick={() => handleEditClick(item)}>
+                              Edit
+                            </button>
+                            <button onClick={() => handleDeleteClick(item._id)}>
+                              Delete
+                            </button>
+                          </>
+                        )}
                       </td>
                     </tr>
-                  
                   </Fragment>
                 ))}
           </tbody>

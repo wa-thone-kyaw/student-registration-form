@@ -32,6 +32,10 @@ export const Secondyear = () => {
   const inputRef = useRef(null);
   const [photo, setImage] = useState("");
 
+  //validation
+  const myanname_pattern = /^[\u1000-\u109f]+$/;
+  const [errors, setErrors] = useState({});
+
   const handleImageChange = (event) => {
     const file = event.target.files[0];
     console.log(file);
@@ -107,72 +111,78 @@ export const Secondyear = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    const myannameIsValid = myanname_pattern.test(myanname);
+    setErrors({
+      myanname: myannameIsValid ? "" : "Enter myanmar name",
+    });
 
-    const formData = new FormData();
-    formData.append("myanname", myanname);
-    formData.append("engname", engname);
-    formData.append("nrc", nrc);
-    formData.append("birthDay", birthDay);
-    formData.append("nation", nation);
-    formData.append("seatno", seatno);
-    formData.append("score", score);
-    formData.append("passedseat_no", passedseat_no);
-    formData.append("currentseat_no", currentseat_no);
-    formData.append("myanfathername", myanfathername);
-    formData.append("engfathername", engfathername);
-    formData.append("fathernrc", fathernrc);
-    formData.append("fathernation", fathernation);
-    formData.append("fatherjob", fatherjob);
-    formData.append("mothername", mothername);
-    formData.append("mothernrc", mothernrc);
-    formData.append("mothernation", mothernation);
-    formData.append("motherjob", motherjob);
-    formData.append("address", address);
-    formData.append("phone_no", phone_no);
-    formData.append("student_no", student_no);
-    formData.append("email", email);
-    formData.append("photo", photo);
+    if (myannameIsValid) {
+      const formData = new FormData();
+      formData.append("myanname", myanname);
+      formData.append("engname", engname);
+      formData.append("nrc", nrc);
+      formData.append("birthDay", birthDay);
+      formData.append("nation", nation);
+      formData.append("seatno", seatno);
+      formData.append("score", score);
+      formData.append("passedseat_no", passedseat_no);
+      formData.append("currentseat_no", currentseat_no);
+      formData.append("myanfathername", myanfathername);
+      formData.append("engfathername", engfathername);
+      formData.append("fathernrc", fathernrc);
+      formData.append("fathernation", fathernation);
+      formData.append("fatherjob", fatherjob);
+      formData.append("mothername", mothername);
+      formData.append("mothernrc", mothernrc);
+      formData.append("mothernation", mothernation);
+      formData.append("motherjob", motherjob);
+      formData.append("address", address);
+      formData.append("phone_no", phone_no);
+      formData.append("student_no", student_no);
+      formData.append("email", email);
+      formData.append("photo", photo);
 
-    setMyanname("");
-    setEngname("");
-    setNrc("");
-    setBirthDay("");
-    setNation("");
-    setSeatNo("");
-    setScore("");
-    setPassedSeatNo("");
-    setCurrentSeatNo("");
-    setMyanFatherName("");
-    setEngFatherName("");
-    setFatherNrc("");
-    setFatherNation("");
-    setFatherJob("");
-    setMotherName("");
-    setMotherNrc("");
-    setMotherNation("");
-    setMotherJob("");
-    setAddress("");
-    setStudentNo("");
-    setPhoneNo("");
-    setEmail("");
-    setImage("");
+      setMyanname("");
+      setEngname("");
+      setNrc("");
+      setBirthDay("");
+      setNation("");
+      setSeatNo("");
+      setScore("");
+      setPassedSeatNo("");
+      setCurrentSeatNo("");
+      setMyanFatherName("");
+      setEngFatherName("");
+      setFatherNrc("");
+      setFatherNation("");
+      setFatherJob("");
+      setMotherName("");
+      setMotherNrc("");
+      setMotherNation("");
+      setMotherJob("");
+      setAddress("");
+      setStudentNo("");
+      setPhoneNo("");
+      setEmail("");
+      setImage("");
 
-    alert(
-      "You registered successfully! Then click Next button and read the university rules. "
-    );
-    Axios.post(
-      "http://127.0.0.1:8000/student_registration/matched_second_year_civil",
-      formData
-    )
-      .then((response) => {
-        alert(
-          `You registered successfully! Then click Next button and read the university rules.`
-        );
-        console.log("Data sent successfully:", response.data);
-      })
-      .catch((error) => {
-        console.error("Error sending data:", error);
-      });
+      alert(
+        "You registered successfully! Then click Next button and read the university rules. "
+      );
+      Axios.post(
+        "http://127.0.0.1:8000/student_registration/matched_second_year_civil",
+        formData
+      )
+        .then((response) => {
+          alert(
+            `You registered successfully! Then click Next button and read the university rules.`
+          );
+          console.log("Data sent successfully:", response.data);
+        })
+        .catch((error) => {
+          console.error("Error sending data:", error);
+        });
+    }
   };
   return (
     <form onSubmit={handleSubmit}>
@@ -234,6 +244,9 @@ export const Secondyear = () => {
               name="myanname"
               //required
             />
+            {errors.myanname && (
+              <span className="danger">{errors.myanname}</span>
+            )}
           </div>
 
           <div className="form-group">

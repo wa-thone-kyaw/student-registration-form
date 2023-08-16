@@ -1,18 +1,13 @@
 export const SignUpValidation = (values) => {
   let error = {};
-  const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  const password_pattern = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-z0-9]/;
-  if (values.name === "") {
+  const username_pattern = /^[A-Z]+$/;
+  const password_pattern = /^[a-z]+$/;
+  if (values.username === "") {
     error.username = "Name should not be empty";
+  } else if (!username_pattern.test(values.username)) {
+    error.username = "Username didn't match";
   } else {
     error.username = "";
-  }
-  if (values.email === "") {
-    error.email = "Name should not be empty";
-  } else if (!email_pattern.test(values.email)) {
-    error.email = "Email Didn't match";
-  } else {
-    error.email = "";
   }
   if (values.password === "") {
     error.password = "Password should not be empty";
@@ -23,4 +18,3 @@ export const SignUpValidation = (values) => {
   }
   return error;
 };
-export default SignUpValidation;
